@@ -34,6 +34,7 @@ This mutation likely changed b0 <= this.lower to b0 < this.lower or b0 > this.lo
 Since this mutation survived, it indicates that there was no test case specifically testing the boundary condition of b0 being exactly equal to this.lower. However, considering the provided test cases, it's surprising this mutant survived, as several test cases should cover boundary conditions.
 
 `2. Negated Conditional → KILLED`
+
 Negating b0 <= this.lower would cause the method's logic to change significantly.
 
 It was killed, meaning at least one test case failed due to this change, which indicates good test coverage for the conditional logic's true and false paths.
