@@ -84,17 +84,62 @@ Similar to other mutations on this.lower, its survival suggests insufficient tes
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
 
+The presence of equivalent mutants can lead to a misrepresentation of the mutation scores, thereby affecting the perceived quality of the test suite. Despite the test suite’s actual quality, the inability to detect these equivalent mutants can give an impression of lower quality. However, this is not an accurate reflection, as these mutants are inherently undetectable by any tests.
+
 # A discussion of what could have been done to improve the mutation score of the test suites
 
+The mutation coverage, which was established based on the tests we developed in labs 2 and 3, allowed us to create highly effective test suites for both the Range and DataUtilities classes. With DataUtilities nearing 78% mutation coverage, it was a difficult task to significantly enhance the coverage due to the presence of non-applicable or equivalent mutants. However, we scrutinized the mutation summaries for the statements and adopted a reverse-engineering approach to try and augment the coverage for DataUtilities. A similar strategy was employed for Range to eradicate some of the surviving mutants. In future, this same methodology can potentially be utilized to eliminate more mutants, thereby improving the mutation score.
+
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
+
+Mutation testing is essential as it provides an assessment of our test suite’s quality and its effectiveness in identifying errors.
+
+Benefits of Mutation Testing:
+- Mutation Testing is automated, reducing the need for manual intervention.
+- Mutation Testing provides a mutation score, which serves as an indicator of when to cease testing and which test suite has superior quality.
+
+Drawbacks of Mutation Testing:
+- Mutation Testing can be time-intensive, which may slow down the development process.
+- The existence of equivalent mutants, which are prevalent in System Under Test (SUTs), poses a challenge as these mutants cannot be eliminated.
+
+
+
+
+
+
 
 # Explain your SELENUIM test case design process
 
 # Explain the use of assertions and checkpoints
 
+In Selenium, assertions serve as critical checkpoints that validate the System Under Test (SUT) is functioning as expected. For instance, assertions can be used to confirm whether a webpage is displaying the correct links, or to verify the presence or absence of a particular element. They can also be used to ensure that a specific element is visible or interactive. If an assertion fails, the test execution is halted and an error message is reported.
+
+
+Conversely, checkpoints are utilized to confirm that a specific value or state is attained during the test execution. These are typically implemented using the “verify” command. This command inspects a specific property or attribute of an element and compares it with an expected value. If the actual value aligns with the expected value, the test proceeds. However, if there is a mismatch, the test execution is stopped and an error message is reported.
+
 # how did you test each functionaity with different test data
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
+
+Selenium:
+
+Advantages:
+- Selenium offers extensive cross-platform and cross-browser support, enhancing its versatility and usability.
+
+Disadvantages:
+- Its application is limited to the testing of web applications only, restricting its scope.
+
+Sikulix:
+
+Advantages:
+
+- Sikulix has the capability to automate Flash objects, providing a unique advantage.
+- It also extends its automation capabilities to desktop applications, broadening its utility.
+
+Disadvantages:
+
+- Sikulix encounters challenges when it comes to cross-browser testing, limiting its effectiveness in diverse browser environments.
+
 
 # How the team work/effort was divided and managed
 
