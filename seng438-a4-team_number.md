@@ -11,6 +11,7 @@
 
 # Introduction
 
+This lab report focuses on the exploration and understanding of two key testing methodologies: Mutation Testing and GUI Testing, applied to a selected website. The first segment of the assignment required students to delve into the intricacies of Mutation Testing. This involved the use of a tool known as PIT Mutations to introduce mutation faults into a Java code-base. The task was to interpret the mutation scores reported and analyze the mutants that were either killed or survived. This analysis was then used to devise new test cases aimed at enhancing the overall efficacy of the test suite. The second part of the assignment revolved around GUI Testing of a chosen website. This was accomplished through a prevalent approach to GUI test automation known as record and replay. The exercise provided an opportunity to learn and apply Selenium, a widely recognized tool for web interface testing, and compare its performance with other alternatives.
 
 # Analysis of 10 Mutants of the Range class 
 
