@@ -2,12 +2,12 @@
 
 **Lab. Report \#4 – Mutation Testing and Web app testing**
 
-| Group \#:      |     |
-| -------------- | --- |
-| Student Names: |     |
-|                |     |
-|                |     |
-|                |     |
+| Group: 9   |
+|-----------------|
+| Student 1 Zhifan Li        |   
+| Student 2 Sandip Mishra              |   
+| Student 3 Shanzi Ye             |   
+| Student 4 Fardin Aryan      
 
 # Introduction
 
