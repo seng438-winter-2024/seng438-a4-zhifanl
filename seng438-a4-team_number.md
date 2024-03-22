@@ -192,6 +192,8 @@ Our team prioritized equitable workload distribution and active collaboration fo
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
+We had several difficulties when working on Lab 4, mostly related to comprehending the objectives of the task and preparing the PITest environment. One of the biggest obstacles was the ambiguous directions, which made it difficult to understand and took a lot of time to complete the job. Further impeding our work were technical issues with PITest, which sometimes prevented it from producing summaries and necessitated several restarts. Our time was mostly taken up by these problems, which hindered our productivity and made it harder for us to comprehend the lab activities.In spite of these challenges, we worked on the assignment and figure out the solution. We discovered the value of perseverance and cooperation and this assignment improves our troubleshooting abilities.
+
 # Comments/feedback on the lab itself
 
 Our understanding and proficiency in software testing were enhanced by the insightful experience of the Web App and Mutation Testing Lab. Although it is a little difficult at first due to a lack of thorough instructions, working with PIT Mutation and Selenium turned out to be immensely informative. One of the best parts of the lab was working as a team to overcome the more challenging parts. We enjoyed the process even though we had to deal with some challenging situations that put our comprehension to the test. In the future, a greater range of examples, better beginning support, and more detailed instructions would all significantly improve the lab's learning experience.
