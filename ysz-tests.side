@@ -1,0 +1,544 @@
+{
+  "id": "f3acd1bb-bdff-403d-ae59-e56af195a8f7",
+  "version": "2.0",
+  "name": "Ebay",
+  "url": "https://www.ebay.ca/",
+  "tests": [{
+    "id": "0d8b0c94-b11c-4954-9039-499a6514b19e",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "e4320e42-b404-4c83-b97d-09205006d879",
+    "name": "test-providing-feedback",
+    "commands": [{
+      "id": "7b872894-db43-42a2-a3e0-41e31429b7d6",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ebay.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e97ce4dd-20bf-4cbb-a73c-ff51b8c5df01",
+      "comment": "",
+      "command": "click",
+      "target": "css=.vl-feedback__survey",
+      "targets": [
+        ["css=.vl-feedback__survey", "css:finder"],
+        ["xpath=//body/div[6]/a/div", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win8523",
+      "windowTimeout": 2000
+    }, {
+      "id": "d36b0bcf-ee84-43a5-9d46-fdfd453e6a4a",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win8523}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "da001a35-0d58-476a-a986-0b2f0ea7d427",
+      "comment": "",
+      "command": "click",
+      "target": "id=_0_4",
+      "targets": [
+        ["id=_0_4", "id"],
+        ["css=#\\_0_4", "css:finder"],
+        ["xpath=//input[@id='_0_4']", "xpath:attributes"],
+        ["xpath=//div[@id='q0']/div/fieldset/table/tbody/tr[3]/td[5]/div/input", "xpath:idRelative"],
+        ["xpath=//td[5]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d37ddd17-57a8-4b51-89b2-6ccd93a2e7f8",
+      "comment": "",
+      "command": "click",
+      "target": "id=qid_1",
+      "targets": [
+        ["id=qid_1", "id"],
+        ["name=_1", "name"],
+        ["css=#qid_1", "css:finder"],
+        ["xpath=//textarea[@id='qid_1']", "xpath:attributes"],
+        ["xpath=//div[@id='q1']/div[3]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc36e19b-62b8-445c-845b-b108501e491d",
+      "comment": "",
+      "command": "type",
+      "target": "id=qid_1",
+      "targets": [
+        ["id=qid_1", "id"],
+        ["name=_1", "name"],
+        ["css=#qid_1", "css:finder"],
+        ["xpath=//textarea[@id='qid_1']", "xpath:attributes"],
+        ["xpath=//div[@id='q1']/div[3]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "This site is very good, I like it alot!"
+    }, {
+      "id": "91930341-5fa5-40c7-abd7-1fceb09485ec",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitFdbk",
+      "targets": [
+        ["id=submitFdbk", "id"],
+        ["css=#submitFdbk", "css:finder"],
+        ["xpath=//button[@id='submitFdbk']", "xpath:attributes"],
+        ["xpath=//div[@id='pg_0']/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,' Send')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "16185ed1-b1be-4b13-bfbf-a54d7fd833b3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=p:nth-child(1)",
+      "targets": [
+        ["css=p:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'While we are not able to respond directly to your comments, we will carefully review them to improve your experience with eBay!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "a4ebbcbb-cd24-4f7e-afe0-8ed26b4065d1",
+    "name": "test-providing-feedback-with-empty-parameters",
+    "commands": [{
+      "id": "6acc4798-d5e0-44e1-8906-e5147358a1aa",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ebay.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "47876369-052d-4bcc-85c9-bc25e9d8a331",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.vl-feedback__survey",
+      "targets": [
+        ["css=.vl-feedback__survey", "css:finder"],
+        ["xpath=//body/div[6]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ad97a59-9b94-4094-822e-c645350803f6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.vl-feedback__survey",
+      "targets": [
+        ["css=.vl-feedback__survey", "css:finder"],
+        ["xpath=//body/div[6]/a/div", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win9157",
+      "windowTimeout": 2000
+    }, {
+      "id": "4fbdb6ed-48c5-4804-8069-87270243a9c5",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win9157}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c009afdf-fb09-498c-8c85-99aaf7a8d6b4",
+      "comment": "",
+      "command": "click",
+      "target": "id=_0_4",
+      "targets": [
+        ["id=_0_4", "id"],
+        ["css=#\\_0_4", "css:finder"],
+        ["xpath=//input[@id='_0_4']", "xpath:attributes"],
+        ["xpath=//div[@id='q0']/div/fieldset/table/tbody/tr[3]/td[5]/div/input", "xpath:idRelative"],
+        ["xpath=//td[5]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cac0d422-e524-4a07-b490-b2c20be0216a",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitFdbk",
+      "targets": [
+        ["id=submitFdbk", "id"],
+        ["css=#submitFdbk", "css:finder"],
+        ["xpath=//button[@id='submitFdbk']", "xpath:attributes"],
+        ["xpath=//div[@id='pg_0']/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,' Send')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7a2958d-5c40-41e1-ad36-087f7207c86a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=p:nth-child(1)",
+      "targets": [
+        ["css=p:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'While we are not able to respond directly to your comments, we will carefully review them to improve your experience with eBay!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "600461c7-a411-4887-8d0f-7f4e90dc9cda",
+    "name": "test-providing-feedback-with-all-empty-parameters",
+    "commands": [{
+      "id": "87a955ba-bbd5-4b44-82fd-578c7eb42e29",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ebay.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e31af743-8c6a-4ba8-b3b3-5bd7c414e07f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1200x790",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e8fa3c63-fc39-4350-aaa4-d446ece8b309",
+      "comment": "",
+      "command": "click",
+      "target": "css=.vl-feedback__survey",
+      "targets": [
+        ["css=.vl-feedback__survey", "css:finder"],
+        ["xpath=//body/div[6]/a/div", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win5661",
+      "windowTimeout": 2000
+    }, {
+      "id": "05bade49-d0b4-4d5c-9d05-f12b3c16ebb8",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win5661}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32d7a07c-7f69-4aa4-98a4-5101a253ceb3",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitFdbk",
+      "targets": [
+        ["id=submitFdbk", "id"],
+        ["css=#submitFdbk", "css:finder"],
+        ["xpath=//button[@id='submitFdbk']", "xpath:attributes"],
+        ["xpath=//div[@id='pg_0']/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,' Send')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b32f8656-593e-444a-96b8-da47c8d189c1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rating-selector > .element-notice",
+      "targets": [
+        ["css=.rating-selector > .element-notice", "css:finder"],
+        ["xpath=//div[@id='q0']/div/div[2]", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb06a2e9-c5e3-4bde-b8cb-2cfb109ef24e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rating-selector > .element-notice",
+      "targets": [
+        ["css=.rating-selector > .element-notice", "css:finder"],
+        ["xpath=//div[@id='q0']/div/div[2]", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bda7202a-1ec0-4f84-8088-2c277df55722",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "css=.rating-selector > .element-notice",
+      "targets": [
+        ["css=.rating-selector > .element-notice", "css:finder"],
+        ["xpath=//div[@id='q0']/div/div[2]", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "61581a75-30ce-462a-b183-33f0a6528e03",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rating-selector > .element-notice",
+      "targets": [
+        ["css=.rating-selector > .element-notice", "css:finder"],
+        ["xpath=//div[@id='q0']/div/div[2]", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bdeda99c-29af-4abf-b3d4-7d8d13ba6aa0",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.rating-selector > .element-notice",
+      "targets": [
+        ["css=.rating-selector > .element-notice", "css:finder"],
+        ["xpath=//div[@id='q0']/div/div[2]", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": "Please answer this question before sending."
+    }]
+  }, {
+    "id": "c495d0ff-e0e4-4917-9294-46c852fd87d7",
+    "name": "test-getting-help-with-specific-parameter",
+    "commands": [{
+      "id": "be7ae80b-2202-4199-b2b1-1e6ce358e32a",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ebay.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2bd219cc-2b22-4a84-b44d-4a2478adc720",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1200x790",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c656344b-fb3a-46e6-96ac-c3292c3359af",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Help & Contact",
+      "targets": [
+        ["linkText=Help & Contact", "linkText"],
+        ["css=#gh-p-3 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Help & Contact')]", "xpath:link"],
+        ["xpath=//li[@id='gh-p-3']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.ebay.ca/help/home')]", "xpath:href"],
+        ["xpath=//div/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Help & Contact')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e99e5c56-5aff-472b-9fa5-ed23883f9c89",
+      "comment": "",
+      "command": "click",
+      "target": "id=sr-input",
+      "targets": [
+        ["id=sr-input", "id"],
+        ["name=query", "name"],
+        ["css=#sr-input", "css:finder"],
+        ["xpath=//input[@id='sr-input']", "xpath:attributes"],
+        ["xpath=//div[@id='input-box']/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f78c0cd4-5d41-4bba-a3d8-7629b4b275bd",
+      "comment": "",
+      "command": "type",
+      "target": "id=sr-input",
+      "targets": [
+        ["id=sr-input", "id"],
+        ["name=query", "name"],
+        ["css=#sr-input", "css:finder"],
+        ["xpath=//input[@id='sr-input']", "xpath:attributes"],
+        ["xpath=//div[@id='input-box']/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/input", "xpath:position"]
+      ],
+      "value": "Stolen Items"
+    }, {
+      "id": "afa664e4-de30-43dd-9c7a-39f4eba73ff4",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(1) > .item .main_title",
+      "targets": [
+        ["css=li:nth-child(1) > .item .main_title", "css:finder"],
+        ["xpath=//div[@id='itemList']/ul/li/a/span/span[2]", "xpath:idRelative"],
+        ["xpath=//span/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e3c9a4b-11ef-4903-b84e-3defae07d5c7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.article_title",
+      "targets": [
+        ["css=.article_title", "css:finder"],
+        ["xpath=//div[@id='T2_article']/div/div/header/div/h1", "xpath:idRelative"],
+        ["xpath=//div/h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Stolen property policy')]", "xpath:innerText"]
+      ],
+      "value": "Stolen property policy"
+    }]
+  }, {
+    "id": "adad04c8-18f8-4312-96d8-59addaa3d973",
+    "name": "test-getting-help-with-no-parameter",
+    "commands": [{
+      "id": "948dd5c4-6a02-4965-9a2b-08cca1cafac9",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ebay.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bfe86ec7-e2ef-4c1e-95db-0cd5fec91a19",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1200x790",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f985b7de-e0da-45b5-b529-64e7036e047b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Help & Contact",
+      "targets": [
+        ["linkText=Help & Contact", "linkText"],
+        ["css=#gh-p-3 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Help & Contact')]", "xpath:link"],
+        ["xpath=//li[@id='gh-p-3']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.ebay.ca/help/home')]", "xpath:href"],
+        ["xpath=//div/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Help & Contact')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a769c179-b210-4e7f-916c-54c1499d45a0",
+      "comment": "",
+      "command": "click",
+      "target": "id=sr-action",
+      "targets": [
+        ["id=sr-action", "id"],
+        ["css=#sr-action", "css:finder"],
+        ["xpath=//button[@id='sr-action']", "xpath:attributes"],
+        ["xpath=//div[@id='sr-box']/button", "xpath:idRelative"],
+        ["xpath=//form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3c96ebf-8a61-4d78-98c0-c593d5a6a6ca",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=srTil",
+      "targets": [
+        ["id=srTil", "id"],
+        ["css=#srTil", "css:finder"],
+        ["xpath=//h1[@id='srTil']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div/div/div[3]/h1", "xpath:idRelative"],
+        ["xpath=//div[3]/h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'How can we help you today?')]", "xpath:innerText"]
+      ],
+      "value": "How can we help you today?"
+    }]
+  }, {
+    "id": "35c53165-e867-4da2-841f-4482d219b6f7",
+    "name": "test-getting-help-with-random-parameter",
+    "commands": [{
+      "id": "896cd86a-cb83-4c5b-89c5-d4fcaed8123d",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ebay.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dcc4b5c4-fd0f-4103-8f19-347b3c06ce61",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1200x790",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "207e14b2-2d66-4679-afdd-59beebc2abc4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Help & Contact",
+      "targets": [
+        ["linkText=Help & Contact", "linkText"],
+        ["css=#gh-p-3 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Help & Contact')]", "xpath:link"],
+        ["xpath=//li[@id='gh-p-3']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.ebay.ca/help/home')]", "xpath:href"],
+        ["xpath=//div/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Help & Contact')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "841fd140-b647-4ad8-a817-1b730d4ad5a4",
+      "comment": "",
+      "command": "click",
+      "target": "id=sr-input",
+      "targets": [
+        ["id=sr-input", "id"],
+        ["name=query", "name"],
+        ["css=#sr-input", "css:finder"],
+        ["xpath=//input[@id='sr-input']", "xpath:attributes"],
+        ["xpath=//div[@id='input-box']/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4882e950-5417-433b-a1cd-ac02abb7ccbc",
+      "comment": "",
+      "command": "type",
+      "target": "id=sr-input",
+      "targets": [
+        ["id=sr-input", "id"],
+        ["name=query", "name"],
+        ["css=#sr-input", "css:finder"],
+        ["xpath=//input[@id='sr-input']", "xpath:attributes"],
+        ["xpath=//div[@id='input-box']/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/input", "xpath:position"]
+      ],
+      "value": "dsajfpahigehpiwqhgpqigwqpw"
+    }, {
+      "id": "e1d533a9-ef97-4085-8e63-2a9d2c808d1d",
+      "comment": "",
+      "command": "click",
+      "target": "id=sr-action",
+      "targets": [
+        ["id=sr-action", "id"],
+        ["css=#sr-action", "css:finder"],
+        ["xpath=//button[@id='sr-action']", "xpath:attributes"],
+        ["xpath=//div[@id='sr-box']/button", "xpath:idRelative"],
+        ["xpath=//form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "be9b4dee-abfd-4e3c-aa0d-8d1890876f7c",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=sr-new",
+      "targets": [
+        ["id=sr-new", "id"],
+        ["css=#sr-new", "css:finder"],
+        ["xpath=//div[@id='sr-new']", "xpath:attributes"],
+        ["xpath=//div[@id='srp-view']/div", "xpath:idRelative"],
+        ["xpath=//div[7]/div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "091a5a98-597e-4473-8eac-ffc35e168e0f",
+    "name": "Test Feedback",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e4320e42-b404-4c83-b97d-09205006d879", "600461c7-a411-4887-8d0f-7f4e90dc9cda", "a4ebbcbb-cd24-4f7e-afe0-8ed26b4065d1"]
+  }, {
+    "id": "3418886e-75d2-442d-afb7-465ae2001683",
+    "name": "Test Help",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["adad04c8-18f8-4312-96d8-59addaa3d973", "35c53165-e867-4da2-841f-4482d219b6f7", "c495d0ff-e0e4-4917-9294-46c852fd87d7"]
+  }],
+  "urls": ["https://www.ebay.ca/"],
+  "plugins": []
+}
