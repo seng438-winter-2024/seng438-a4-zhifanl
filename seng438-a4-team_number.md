@@ -80,7 +80,8 @@ Similar to other mutations on this.lower, its survival suggests insufficient tes
 
 ## Range.java 
 
-<img width="705" alt="method" src="https://github.com/seng438-winter-2024/seng438-a4-zhifanl/assets/110203582/d210dc7d-0389-4423-b2b8-9568145003e4">!
+![method](https://github.com/seng438-winter-2024/seng438-a4-zhifanl/assets/110203582/d210dc7d-0389-4423-b2b8-9568145003e4)
+
 
 
 # Analysis drawn on the effectiveness of each of the test classes
