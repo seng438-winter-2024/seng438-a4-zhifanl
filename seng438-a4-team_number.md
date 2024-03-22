@@ -97,7 +97,9 @@ Similar to other mutations on this.lower, its survival suggests insufficient tes
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
 
-The presence of equivalent mutants can lead to a misrepresentation of the mutation scores, thereby affecting the perceived quality of the test suite. Despite the test suite’s actual quality, the inability to detect these equivalent mutants can give an impression of lower quality. However, this is not an accurate reflection, as these mutants are inherently undetectable by any tests.
+In order to find flaws and potential improvement areas in our test suites, mutation testing is an essential technique for assessing their efficacy. The existence of comparable mutants, on the other hand—mutants that do not modify the program's exterior behavior—posed a serious problem for us. Because these mutations are intrinsically undetected by any test case, they could produce deceptive mutation scores, which is an issue for the accuracy of mutation scores.
+
+After learning about the effects of identical mutants, we were aware of how crucial it was to thoroughly examine the mutants that survived and make the distinction between the equivalent mutants and those that survived because of inadequate test coverage. Finding similar mutations is a difficult undertaking that frequently calls for in-depth knowledge of both the consequences of the mutants and the functioning of the code. By concentrating on significant enhancements to our test suite and minimizing needless efforts on unkillable mutants, we aim to improve our mutation testing procedure through this lab.
 
 # A discussion of what could have been done to improve the mutation score of the test suites
 
