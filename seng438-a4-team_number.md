@@ -87,6 +87,10 @@ Similar to other mutations on this.lower, its survival suggests insufficient tes
 
 ![method](https://github.com/seng438-winter-2024/seng438-a4-zhifanl/assets/110203582/85c96475-1898-4583-986e-d913f292252f)
 
+## DataUtilities.java(Original) 
+
+## DataUtilities.java(Updated) 
+![method](https://github.com/seng438-winter-2024/seng438-a4-zhifanl/assets/110203582/c0eb4302-0da8-4e37-85e6-11191b33be7a)
 
 
 # Analysis drawn on the effectiveness of each of the test classes
