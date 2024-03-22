@@ -78,9 +78,14 @@ Similar to other mutations on this.lower, its survival suggests insufficient tes
 
 # Report all the statistics and the mutation score for each test class
 
-## Range.java 
+## Range.java(Oringinal) 
 
 ![method](https://github.com/seng438-winter-2024/seng438-a4-zhifanl/assets/110203582/d210dc7d-0389-4423-b2b8-9568145003e4)
+
+
+## Range.java(Updated) 
+
+![method](https://github.com/seng438-winter-2024/seng438-a4-zhifanl/assets/110203582/85c96475-1898-4583-986e-d913f292252f)
 
 
 
