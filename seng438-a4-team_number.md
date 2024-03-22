@@ -138,26 +138,35 @@ Conversely, checkpoints are utilized to confirm that a specific value or state i
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
 
-Selenium:
+Both Selenium and SikuliX are popular tools in the automation testing landscape, each offering unique advantages and facing certain limitations. Below is a comparison to help understand their strengths and weaknesses.
 
-Advantages:
-- Selenium offers extensive cross-platform and cross-browser support, enhancing its versatility and usability.
+## Selenium
 
-Disadvantages:
-- Its application is limited to the testing of web applications only, restricting its scope.
+Selenium is widely used for automating web browsers, providing a robust framework for testing web applications across different browsers and platforms.
 
-Sikulix:
+### Advantages and Disadvantages
 
-Advantages:
+| Aspect             | Advantages                                                                 | Disadvantages                                                 |
+|--------------------|----------------------------------------------------------------------------|---------------------------------------------------------------|
+| **Support**        | Extensive cross-platform and cross-browser support.                        | Limited to the testing of web applications only.              |
+| **Versatility**    | Highly versatile for web testing scenarios.                               |                                                               |
+| **Community**      | Large community support and extensive documentation.                       |                                                               |
 
-- Sikulix has the capability to automate Flash objects, providing a unique advantage.
-- It also extends its automation capabilities to desktop applications, broadening its utility.
+## SikuliX
 
-Disadvantages:
+SikuliX leverages visual recognition to automate actions on both web and desktop applications, making it useful for a variety of testing scenarios beyond traditional web testing.
 
-- Sikulix encounters challenges when it comes to cross-browser testing, limiting its effectiveness in diverse browser environments.
+### Advantages and Disadvantages
 
+| Aspect                 | Advantages                                                                                  | Disadvantages                                                        |
+|------------------------|---------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
+| **Capability**         | Can automate Flash objects, providing a unique advantage.                                   | Faces challenges with cross-browser testing.                        |
+| **Utility**            | Extends automation capabilities to desktop applications, broadening its utility.            |                                                                      |
+| **Versatility**        | Useful for scenarios where traditional object identification fails.                         |                                                                      |
 
+## Conclusion
+
+Selenium and SikuliX offer different sets of features that cater to various testing needs. Selenium's strength lies in its extensive support for web application testing across a multitude of browsers and platforms. On the other hand, SikuliX's ability to automate Flash objects and desktop applications provides a broader scope of testing beyond web applications. However, the choice between Selenium and SikuliX should be based on the specific requirements of the testing project, considering the advantages and limitations of each tool.
 # How the team work/effort was divided and managed
 
 
