@@ -101,15 +101,20 @@ The mutation coverage, which was established based on the tests we developed in 
 
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
 
-Mutation testing is essential as it provides an assessment of our test suite’s quality and its effectiveness in identifying errors.
+Mutation testing is essential for evaluating the quality of our test suites and their effectiveness in identifying errors. By making small changes (mutations) to the software, we can test whether the current test suite can detect these changes, thereby assessing the suite's ability to catch errors.
 
-Benefits of Mutation Testing:
-- Mutation Testing is automated, reducing the need for manual intervention.
-- Mutation Testing provides a mutation score, which serves as an indicator of when to cease testing and which test suite has superior quality.
+## Advantages and Disadvantages of Mutation Testing
 
-Drawbacks of Mutation Testing:
-- Mutation Testing can be time-intensive, which may slow down the development process.
-- The existence of equivalent mutants, which are prevalent in System Under Test (SUTs), poses a challenge as these mutants cannot be eliminated.
+| Aspect                 | Advantages                                                                                     | Disadvantages                                                                                  |
+|------------------------|------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| **Automation**         | Mutation testing is automated, reducing the need for manual intervention.                      | The process can be time-intensive, potentially slowing down the development process.           |
+| **Quality Assessment** | Provides a mutation score, indicating test suite quality and when to cease testing.           | The presence of equivalent mutants, which the test suite cannot detect, poses a challenge.     |
+| **Error Identification** | Enhances the ability to identify hidden errors by testing the test suite's error detection capabilities. | Requires significant computational resources, which may not be feasible for all projects. |
+| **Test Suite Improvement** | Encourages the improvement of the test suite's coverage and effectiveness.                   | May produce false positives, requiring additional analysis to identify valid issues.          |
+
+## Conclusion
+
+Mutation testing offers a powerful method for improving the quality and effectiveness of test suites in identifying errors. However, its practical application requires careful consideration of its potential drawbacks, including time, computational resources, and the handling of equivalent mutants. By addressing these challenges, development teams can leverage mutation testing to significantly enhance their software testing processes.
 
 
 
