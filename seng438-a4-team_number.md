@@ -168,6 +168,22 @@ SikuliX leverages visual recognition to automate actions on both web and desktop
 
 Selenium and SikuliX offer different sets of features that cater to various testing needs. Selenium's strength lies in its extensive support for web application testing across a multitude of browsers and platforms. On the other hand, SikuliX's ability to automate Flash objects and desktop applications provides a broader scope of testing beyond web applications. However, the choice between Selenium and SikuliX should be based on the specific requirements of the testing project, considering the advantages and limitations of each tool.
 # How the team work/effort was divided and managed
+Our team prioritized equitable workload distribution and active collaboration for this assignment. Each member contributed significantly, ensuring a balanced effort across the board. Below is a detailed breakdown of our work division:
+
+## Work Distribution
+
+### Part 1: Enhancing Mutation Scores and Reporting
+
+- **Shanzi and Fardin**: Tasked with improving the mutation score of `RangeTest.java`. Their responsibilities also include drafting the associated report, detailing the strategies employed and the outcomes achieved.
+
+- **Zhifan and Sansip**: Focused on elevating the mutation score of `DataUtility.java`. Similar to their peers, they are also in charge of composing the report related to their task, encompassing both the methodology used and the results obtained.
+
+### Part 2: Case Testing Requirements
+
+- As per assignment requirements, each team member was required to test at least two cases. Adhering to this guideline, everyone successfully executed two case tests, demonstrating our collective commitment to fulfilling the project requirements comprehensively.
+
+
+
 
 
 # Difficulties encountered, challenges overcome, and lessons learned
