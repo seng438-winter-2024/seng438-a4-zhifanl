@@ -132,6 +132,15 @@ Mutation testing offers a powerful method for improving the quality and effectiv
 
 
 # Explain your SELENUIM test case design process
+## Shanzi Ye
+Shanzi tested two main features on the eBay website: Providing Feedback and Getting Help. These tests simulate common user interactions with the site, verifying the functionality and user experience for feedback submission and help information retrieval.
+
+### Tested Functionalities
+
+| Feature              | Description                                                   |
+|----------------------|---------------------------------------------------------------|
+| Providing Feedback   | Tests the user's ability to provide feedback through the eBay website's feedback form. This includes opening the feedback form, selecting a rating, entering feedback text, and submitting the feedback. |
+| Getting Help         | Tests the user's ability to search for help topics through the eBay Help and Contact page. This includes navigating to the Help page, entering search terms, executing the search, and verifying the results. |
 
 # Explain the use of assertions and checkpoints
 
