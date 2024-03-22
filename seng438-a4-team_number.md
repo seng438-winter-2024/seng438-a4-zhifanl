@@ -174,9 +174,9 @@ Our team prioritized equitable workload distribution and active collaboration fo
 
 ### Part 1: Enhancing Mutation Scores and Reporting
 
-- **Shanzi and Fardin**: Tasked with improving the mutation score of `RangeTest.java`. Their responsibilities also include drafting the associated report, detailing the strategies employed and the outcomes achieved.
+- **Group 1: Shanzi and Fardin**: Tasked with improving the mutation score of `RangeTest.java`. Group 1's responsibilities also include drafting the associated report, detailing the strategies employed and the outcomes achieved.
 
-- **Zhifan and Sansip**: Focused on elevating the mutation score of `DataUtility.java`. Similar to their peers, they are also in charge of composing the report related to their task, encompassing both the methodology used and the results obtained.
+- **Group2: Zhifan and Sansip**: Focused on elevating the mutation score of `DataUtility.java`. Similar to their group 1, group 2 are also in charge of composing the report related to their task, encompassing both the methodology used and the results obtained.
 
 ### Part 2: Case Testing Requirements
 
