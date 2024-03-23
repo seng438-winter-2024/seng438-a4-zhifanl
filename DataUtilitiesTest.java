@@ -1063,19 +1063,7 @@ public class DataUtilitiesTest extends DataUtilities {
 		     Number[][] actual = DataUtilities.createNumberArray2D(data);
 		     assertArrayEquals("2D arrays filled with zeros should be equal", expected, actual);
 		 }
-		 
-		 
-		 //
-		 
-		 
-		 //
-		 
-		 
-		 //
-		 /** 
-	     * Testing Method: equal(double[][] a, double[][] b)
-		 */
-		 
+		
 		 
 		 
 		// Test Status: PASS
@@ -1253,210 +1241,218 @@ public class DataUtilitiesTest extends DataUtilities {
 		
 		
 		// Test Status: PASS
-		// Testing: Clone method with an empty array.
-		// Expected Result: A cloned array that is also empty.
+		// Testing: Calculate column total with valid rows and valid values.
+		// Expected Result: The total for the specified column using valid rows should be 10.0.
 		@Test
-		public void cloneEmptyArray() {
-		    double[][] source = {};
-		    double[][] cloned = DataUtilities.clone(source);
-		    assertNotNull( "Cloned array should not be null", cloned);
-		    assertEquals( "Cloned array should be empty", 0, cloned.length);
+		public void calculateColumnTotalValidRowValidValues_Mutation() {
+		    int column = 0;
+		    double expected = 10.0;
+		    DefaultKeyedValues2D positive3by3KeyedValues2D = new DefaultKeyedValues2D(); 
+		    positive3by3KeyedValues2D.addValue(9, 0, 0);
+		    positive3by3KeyedValues2D.addValue(8, 0, 1);
+		    positive3by3KeyedValues2D.addValue(9, 0, 2);
+		    positive3by3KeyedValues2D.addValue(1, 1, 0);
+		    positive3by3KeyedValues2D.addValue(2, 1, 1);
+		    positive3by3KeyedValues2D.addValue(3, 1, 2);
+		    positive3by3KeyedValues2D.addValue(1, 2, 0);
+		    positive3by3KeyedValues2D.addValue(0, 2, 1);
+		    positive3by3KeyedValues2D.addValue(4, 2, 2);
+		    int[] validRows = {0,2};
+		    double actual = DataUtilities.calculateColumnTotal(positive3by3KeyedValues2D, column, validRows);
+		    assertEquals("Testing with valid rows and valid values should result in total 10.0", expected, actual, 0.0000);
 		}
-		
-		
+
 		// Test Status: PASS
-		// Testing: Clone method with a full array (no null sub-arrays).
-		// Expected Result: A deep clone of the array where all sub-arrays are exactly duplicated.
+		// Testing: Calculate column total with an invalid row and valid values.
+		// Expected Result: The total for the specified column using an invalid row should be 0.0.
 		@Test
-		public void cloneFullArray() {
-		    double[][] source = {
-		        {1.0, Double.NaN},
-		        {Double.POSITIVE_INFINITY, -1.0}
-		    };
-		    double[][] cloned = DataUtilities.clone(source);
-		    assertNotNull( "Cloned array should not be null", cloned);
-		    assertEquals( "Cloned array should have the same length as the source", source.length, cloned.length);
-		    for (int i = 0; i < source.length; i++) {
-		        assertNotSame( "Sub-array should be a different object (cloned)", source[i], cloned[i]);
-		        assertTrue("Sub-array values should be equal", Arrays.equals(source[i], cloned[i]));
-		    }
+		public void calculateColumnTotalInvalidRowValidValues_Mutation() {
+		    int column = 0;
+		    double expected = 0.0;
+		    DefaultKeyedValues2D positive3by3KeyedValues2D = new DefaultKeyedValues2D(); 
+		    positive3by3KeyedValues2D.addValue(9, 0, 0);
+		    positive3by3KeyedValues2D.addValue(8, 0, 1);
+		    positive3by3KeyedValues2D.addValue(9, 0, 2);
+		    positive3by3KeyedValues2D.addValue(1, 1, 0);
+		    positive3by3KeyedValues2D.addValue(2, 1, 1);
+		    positive3by3KeyedValues2D.addValue(3, 1, 2);
+		    positive3by3KeyedValues2D.addValue(1, 2, 0);
+		    positive3by3KeyedValues2D.addValue(0, 2, 1);
+		    positive3by3KeyedValues2D.addValue(4, 2, 2);
+		    int[] invalidRowsCols = {3};
+		    double actual = DataUtilities.calculateColumnTotal(positive3by3KeyedValues2D, column, invalidRowsCols);
+		    assertEquals("Testing with an invalid row and valid values should result in total 0.0", expected, actual, 0.000000001d);
 		}
-		
-	
-	    @Test
-	    public void calculateColumnTotalValidRowValidValues_Mutation() {
-	    	int column = 0;
-	    	double expected = 10.0;
-	    	DefaultKeyedValues2D positive3by3KeyedValues2D = new DefaultKeyedValues2D(); 
-	    	positive3by3KeyedValues2D.addValue(9, 0, 0);
-	    	positive3by3KeyedValues2D.addValue(8, 0, 1);
-	    	positive3by3KeyedValues2D.addValue(9, 0, 2);
-	    	positive3by3KeyedValues2D.addValue(1, 1, 0);
-	    	positive3by3KeyedValues2D.addValue(2, 1, 1);
-	    	positive3by3KeyedValues2D.addValue(3, 1, 2);
-	    	positive3by3KeyedValues2D.addValue(1, 2, 0);
-	    	positive3by3KeyedValues2D.addValue(0, 2, 1);
-	    	positive3by3KeyedValues2D.addValue(4, 2, 2);
-	    	int[] validRows = {0,2};
-	    	double actual = DataUtilities.calculateColumnTotal(positive3by3KeyedValues2D, column, validRows);
-	    	assertEquals("Testing with valid rows and valid values", expected, actual, 0.0000);
-	    }
-	    
-	    @Test
-	    public void calculateColumnTotalInvalidRowValidValues_Mutation() {
-	    	int column = 0;
-	    	double expected = 0.0;
-	    	DefaultKeyedValues2D positive3by3KeyedValues2D = new DefaultKeyedValues2D(); 
-	    	positive3by3KeyedValues2D.addValue(9, 0, 0);
-	    	positive3by3KeyedValues2D.addValue(8, 0, 1);
-	    	positive3by3KeyedValues2D.addValue(9, 0, 2);
-	    	positive3by3KeyedValues2D.addValue(1, 1, 0);
-	    	positive3by3KeyedValues2D.addValue(2, 1, 1);
-	    	positive3by3KeyedValues2D.addValue(3, 1, 2);
-	    	positive3by3KeyedValues2D.addValue(1, 2, 0);
-	    	positive3by3KeyedValues2D.addValue(0, 2, 1);
-	    	positive3by3KeyedValues2D.addValue(4, 2, 2);
-	    	int[] invalidRowsCols = {3};
-	    	double actual = DataUtilities.calculateColumnTotal(positive3by3KeyedValues2D, column, invalidRowsCols);
-	    	assertEquals("Testing with invalid row and valid values", expected, actual, 0.000000001d);
-	    }
 
-	    
-	    @Test
-	    public void calculateRowTotalWithValidDataAndColumns() {
-	        
-	        final Values2D values = mockingContext.mock(Values2D.class);
-	        mockingContext.checking(new Expectations() {{
-	            allowing(values).getColumnCount();
-	            will(returnValue(3)); 
-	            oneOf(values).getValue(0, 1);
-	            will(returnValue(2.0));
-	            oneOf(values).getValue(0, 2);
-	            will(returnValue(3.0));
-	        }});
-	        double result = DataUtilities.calculateRowTotal(values, 0, new int[]{1, 2});
-	        assertEquals("calculateRowTotal with valid data and columns should return correct total", 5.0, result, .000000001d);
-	    }
+		// Test Status: PASS
+		// Testing: Calculate row total with valid data and specified columns.
+		// Expected Result: The total for the specified row and columns should be 5.0.
+		@Test
+		public void calculateRowTotalWithValidDataAndColumns() {
+		    final Values2D values = mockingContext.mock(Values2D.class);
+		    mockingContext.checking(new Expectations() {{
+		        allowing(values).getColumnCount();
+		        will(returnValue(3)); 
+		        oneOf(values).getValue(0, 1);
+		        will(returnValue(2.0));
+		        oneOf(values).getValue(0, 2);
+		        will(returnValue(3.0));
+		    }});
+		    double result = DataUtilities.calculateRowTotal(values, 0, new int[]{1, 2});
+		    assertEquals("Calculate row total with valid data and specified columns should return correct total 5.0", 5.0, result, .000000001d);
+		}
 
 
-	    @Test
-	    public void calculateRowTotalWithInvalidColumnIndex() {
-	        
-	        final Values2D values = mockingContext.mock(Values2D.class);
-	        mockingContext.checking(new Expectations() {{
-	            allowing(values).getColumnCount();
-	            will(returnValue(2)); 
-	            oneOf(values).getValue(0, 0);
-	            will(returnValue(1.0));
-	        }});
-	        double result = DataUtilities.calculateRowTotal(values, 0, new int[]{0, 2});
-	        assertEquals("calculateRowTotal with a column index out of bounds should ignore that column", 1.0, result, .000000001d);
-	    }
+		// Test Status: PASS
+		// Testing: Calculate row total with an invalid column index.
+		// Expected Result: Ignoring invalid column index should result in correct row total calculation.
+		@Test
+		public void calculateRowTotalWithInvalidColumnIndex() {
+		    final Values2D values = mockingContext.mock(Values2D.class);
+		    mockingContext.checking(new Expectations() {{
+		        allowing(values).getColumnCount();
+		        will(returnValue(2)); 
+		        oneOf(values).getValue(0, 0);
+		        will(returnValue(1.0));
+		    }});
+		    double result = DataUtilities.calculateRowTotal(values, 0, new int[]{0, 2});
+		    assertEquals("Ignoring invalid column index should result in correct row total of 1.0", 1.0, result, .000000001d);
+		}
 
+		// Test Status: PASS
+		// Testing: Calculate row total with an empty array of valid columns.
+		// Expected Result: Row total should be 0 for an empty array of valid columns.
+		@Test
+		public void calculateRowTotalWithEmptyValidColumns() {
+		    final Values2D values = mockingContext.mock(Values2D.class);
+		    mockingContext.checking(new Expectations() {{
+		        allowing(values).getColumnCount();
+		        will(returnValue(3)); 
+		    }});
+		    double result = DataUtilities.calculateRowTotal(values, 0, new int[]{});
+		    assertEquals("Row total should be 0 for an empty array of valid columns", 0.0, result, .000000001d);
+		}
 
-	    @Test
-	    public void calculateRowTotalWithEmptyValidColumns() {
-	        
-	        final Values2D values = mockingContext.mock(Values2D.class);
-	        mockingContext.checking(new Expectations() {{
-	            allowing(values).getColumnCount();
-	            will(returnValue(3)); 
-	        }});
-	        double result = DataUtilities.calculateRowTotal(values, 0, new int[]{});
-	        assertEquals("calculateRowTotal with an empty array of valid columns should return 0", 0.0, result, .000000001d);
-	    }
-	    
-	    @Test (expected = IllegalArgumentException.class)
-	    public void testCloneNullValue_Mutation() {
-	    	double[][] source = null;
-	    	DataUtilities.clone(source);
-	    }
-	    
-	    
-	    @Test (expected = IllegalArgumentException.class)
-	    public void testCalculateColumnTotalWithNullValues_Mutation() {
-	    	Values2D data = null;
-	    	int column = 2;
-	    	DataUtilities.calculateColumnTotal(data, column);
-	    }
-	    
-	    @Test (expected = IllegalArgumentException.class)
-	    public void testCalculateColumnTotalValidRowsNull_Mutation() {
-	    	Values2D data = null;
-	    	int column = 2;
-	    	int[] validRows = new int[0];
-	    	DataUtilities.calculateColumnTotal(data, column, validRows);
-	    }
-	    
-	    @Test (expected = IllegalArgumentException.class)
-	    public void testCalculateRowTotalNull_Mutation() {
-	    	Values2D data = null;
-	    	int row = 2;
-	    	DataUtilities.calculateRowTotal(data, row);
-	    }
-	    
-	    
-	    @Test (expected = IllegalArgumentException.class)
-	    public void testCalculateRowTotalNullValidCols_Mutation() {
-	    	Values2D data = null;
-	    	int row = 2;
-	    	int[] validCols = new int[0];
-	    	DataUtilities.calculateRowTotal(data, row, validCols);
-	    }
-	    
-	    @Test (expected = IllegalArgumentException.class)
-	    public void testCreateNumberArrayNull_Mutation() {
-	    	double[] data = null;
-	    	DataUtilities.createNumberArray(data);
-	    }
-	    
+		// Test Status: FAIL
+		// Testing: Clone method with a null array.
+		// Expected Result: An IllegalArgumentException should be thrown.
+		@Test(expected = IllegalArgumentException.class)
+		public void testCloneNullValue_Mutation() {
+		    double[][] source = null;
+		    DataUtilities.clone(source);
+		}
 
-	    @Test (expected = IllegalArgumentException.class)
-	    public void testCreateNumberArray2DNull_Mutation() {
-	    	double[][] data = null;
-	    	DataUtilities.createNumberArray2D(data);
-	    }
+		// Test Status: FAIL
+		// Testing: Calculate column total with null Values2D object.
+		// Expected Result: An IllegalArgumentException should be thrown.
+		@Test(expected = IllegalArgumentException.class)
+		public void testCalculateColumnTotalWithNullValues_Mutation() {
+		    Values2D data = null;
+		    int column = 2;
+		    DataUtilities.calculateColumnTotal(data, column);
+		}
+
+		// Test Status: FAIL
+		// Testing: Calculate column total with null Values2D object and an empty array of valid rows.
+		// Expected Result: An IllegalArgumentException should be thrown.
+		@Test(expected = IllegalArgumentException.class)
+		public void testCalculateColumnTotalValidRowsNull_Mutation() {
+		    Values2D data = null;
+		    int column = 2;
+		    int[] validRows = new int[0];
+		    DataUtilities.calculateColumnTotal(data, column, validRows);
+		}
+
+		// Test Status: FAIL
+		// Testing: Calculate row total with null Values2D object.
+		// Expected Result: An IllegalArgumentException should be thrown.
+		@Test(expected = IllegalArgumentException.class)
+		public void testCalculateRowTotalNull_Mutation() {
+		    Values2D data = null;
+		    int row = 2;
+		    DataUtilities.calculateRowTotal(data, row);
+		}
+
 	    
 	    
-	    @Test
-	    public void testEqualBothNullArrays_Mutation() {
-	    	double[][] nullA = null;
-	    	double[][] nullB = null;
-	    	assertEquals("Testing two null arrays", true, DataUtilities.equal(nullA, nullB));
-	    }
-	    
-	    @Test
-	    public void testEqualArrANotNull_Mutation() {
-	        double[][] zeroValueLen2Arr = {{0,0}, {0,0}};
-	    	assertEquals("Testing one array with values and one null", false, DataUtilities.equal(zeroValueLen2Arr, null));
-	    }
-	    
-	    @Test
-	    public void testEqualLengthFalse_Mutation() {
-	        double[][] zeroValueLen2Arr = {{0,0}, {0,0}};
-	        double[][] zeroValueLen3ArrA = {{0,0}, {0,0,}, {0,0}};
-	    	assertEquals("Testing two arrays with different lengths", false, DataUtilities.equal(zeroValueLen2Arr, zeroValueLen3ArrA));
-	    }
-	    
-	    @Test
-	    public void testEqualValueFalseSameLength_Mutation() {
-	    	double[][] oneValueLen3Arr = {{1,1}, {0,0}, {0,0}};
-	    	double[][] zeroValueLen3ArrA = {{0,0}, {0,0,}, {0,0}};
-	    	assertEquals("Testing two arrays with the same length but different values", false, DataUtilities.equal(oneValueLen3Arr, zeroValueLen3ArrA));
-	    }
-	    
-	    @Test
-	    public void testEqualValueTrueDifferentLength_Mutation() {
-	    	double[][] oneValueLen3Arr = {{1,1}, {0,0}, {0,0}};
-	    	double[][] zeroValueLen3ArrB = {{0,0}, {0,0,}, {0,0}};
-	    	assertEquals("Testing two arrays with same values but different length", false,DataUtilities.equal(oneValueLen3Arr, zeroValueLen3ArrB));
-	    }
-	    
-	    @Test
-	    public void testEqualArrays() {
-	    	double[][] zeroValueLen3ArrA = {{0,0}, {0,0,}, {0,0}};
-	    	double[][] zeroValueLen3ArrB = {{0,0}, {0,0,}, {0,0}};
-	    	assertEquals("Testing equal arrays", true, DataUtilities.equal(zeroValueLen3ArrA, zeroValueLen3ArrB));
-	    }
+		// Test Status: FAIL
+		// Testing: Calculate row total with null data and empty valid columns array.
+		// Expected Result: An IllegalArgumentException should be thrown due to null data.
+		@Test(expected = IllegalArgumentException.class)
+		public void testCalculateRowTotalNullValidCols_Mutation() {
+		    Values2D data = null;
+		    int row = 2;
+		    int[] validCols = new int[0];
+		    DataUtilities.calculateRowTotal(data, row, validCols);
+		}
+
+		// Test Status: FAIL
+		// Testing: Create NumberArray with a null array.
+		// Expected Result: An IllegalArgumentException should be thrown due to null data.
+		@Test(expected = IllegalArgumentException.class)
+		public void testCreateNumberArrayNull_Mutation() {
+		    double[] data = null;
+		    DataUtilities.createNumberArray(data);
+		}
+
+		// Test Status: FAIL
+		// Testing: Create NumberArray2D with a null 2D array.
+		// Expected Result: An IllegalArgumentException should be thrown due to null data.
+		@Test(expected = IllegalArgumentException.class)
+		public void testCreateNumberArray2DNull_Mutation() {
+		    double[][] data = null;
+		    DataUtilities.createNumberArray2D(data);
+		}
+
+		// Test Status: PASS
+		// Testing: Equal method with both arrays null.
+		// Expected Result: true, as two null arrays are considered equal.
+		@Test
+		public void testEqualBothNullArrays_Mutation() {
+		    double[][] nullA = null;
+		    double[][] nullB = null;
+		    assertEquals("Testing equality of two null arrays should return true", true, DataUtilities.equal(nullA, nullB));
+		}
+
+		// Test Status: PASS
+		// Testing: Equal method with one array non-null and the other null.
+		// Expected Result: false, as a null array and a non-null array are not equal.
+		@Test
+		public void testEqualArrANotNull_Mutation() {
+		    double[][] zeroValueLen2Arr = {{0,0}, {0,0}};
+		    assertEquals("Testing equality of one non-null array and one null array should return false", false, DataUtilities.equal(zeroValueLen2Arr, null));
+		}
+
+		// Test Status: PASS
+		// Testing: Equal method with arrays of different lengths.
+		// Expected Result: false, as arrays of different lengths are not equal.
+		@Test
+		public void testEqualLengthFalse_Mutation() {
+		    double[][] zeroValueLen2Arr = {{0,0}, {0,0}};
+		    double[][] zeroValueLen3Arr = {{0,0}, {0,0}, {0,0}};
+		    assertEquals("Testing two arrays of different lengths should return false", false, DataUtilities.equal(zeroValueLen2Arr, zeroValueLen3Arr));
+		}
+
+		// Test Status: PASS
+		// Testing: Equal method with arrays of the same length but different values.
+		// Expected Result: false, as arrays with the same length but different values are not equal.
+		@Test
+		public void testEqualValueFalseSameLength_Mutation() {
+		    double[][] oneValueLen3Arr = {{1,1}, {0,0}, {0,0}};
+		    double[][] zeroValueLen3Arr = {{0,0}, {0,0}, {0,0}};
+		    assertEquals("Testing two arrays of the same length but different values should return false", false, DataUtilities.equal(oneValueLen3Arr, zeroValueLen3Arr));
+		}
+
+		// Test Status: PASS
+		// Testing: Equal method incorrectly described for arrays with same values but different lengths. 
+		// Correction: Testing equal arrays with the same values and same length.
+		// Expected Result: true, as arrays with the same values and length are equal.
+		@Test
+		public void testEqualArrays() {
+		    double[][] zeroValueLen3ArrA = {{0,0}, {0,0}, {0,0}};
+		    double[][] zeroValueLen3ArrB = {{0,0}, {0,0}, {0,0}};
+		    assertEquals("Testing equal arrays with the same values and same length should return true", true, DataUtilities.equal(zeroValueLen3ArrA, zeroValueLen3ArrB));
+		}
+
 	   
 }
